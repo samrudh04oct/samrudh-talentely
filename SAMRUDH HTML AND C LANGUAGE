@@ -1,0 +1,675 @@
+#include <stdio.h> // Include the standard input/output library
+
+int main() {
+    // Your code here
+
+    return 0; // Indicate successful program execution
+}
+#include <stdio.h>
+
+int main() {
+    int num1, num2, sum;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);
+
+    sum = num1 + num2;
+
+    printf("Sum of %d and %d is: %d\n", num1, num2, sum);
+
+    return 0;
+}
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    char operator;
+    double num1, num2, result;
+
+    printf("Enter an operator (+, -, *, /, ^, s, c): ");
+    scanf(" %c", &operator);
+
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &num1, &num2);
+
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            printf("%.2lf + %.2lf = %.2lf", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%.2lf - %.2lf = %.2lf", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%.2lf * %.2lf = %.2lf", num1, num2, result);
+            break;
+        case '/':
+            if (num2 == 0) {
+                printf("Error: Division by zero!\n");
+            } else {
+                result = num1 / num2;
+                printf("%.2lf / %.2lf = %.2lf", num1, num2, result);
+            }
+            break;
+        case '^':
+            result = pow(num1, num2);
+            printf("%.2lf ^ %.2lf = %.2lf", num1, num2, result);
+            break;
+        case 's':
+            result = sin(num1);
+            printf("sin(%.2lf) = %.2lf", num1, result);
+            break;
+        case 'c':
+            result = cos(num1);
+            printf("cos(%.2lf) = %.2lf", num1, result);
+            break;
+        default:
+            printf("Error: Invalid operator\n");
+    }
+
+    return 0;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANIme - Home</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>  
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      background: url(photos/45.jpg);
+      background-size: cover;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      overflow-x: hidden;
+      background-color: #141414;
+    }
+
+   
+    .side-nav {
+      height: 100%;
+      width: 60px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #141414;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+
+    .side-nav a {
+      text-decoration: none;
+      color: white;
+      margin: 20px 0;
+      font-size: 24px;
+      transition: color 0.3s;
+    }
+
+    .side-nav a:hover {
+      color: #e50914;
+    }
+
+    .side-nav i {
+      font-size: 30px;
+      transition: color 0.3s;
+    }
+
+    .side-nav i:hover {
+      color: #e50914;
+    }
+
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 10px 5%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      position: relative;
+      left: -60px;
+      font-size: 1.8rem;
+      color: #e50914;
+    }
+
+    header nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #e50914;
+    }
+
+    .hero {
+  position: relative;
+  height: 450px;
+  background: url(photos/shanks-5k-one-piece-5120x2880-18352.jpg) no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 40px 5%;
+  color: #fff;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-content {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+    .hero-content h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .hero-content h2 {
+      position: relative;
+      left: 10px;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    .hero-content button {
+      position: relative;
+      left: 10px;
+      background-color: #e50914;
+      border: none;
+      padding: 10px 25px;
+      font-size: 1.1rem;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .hero-content button:hover {
+      background: #b20710;
+    }
+
+    .section {
+      background-image: url() ;
+      background-size: cover;
+      width: 120%;
+      margin: 40px 5%;
+      margin-left: 0px;
+      right: 10px;
+      padding: 60px 5%;
+      color: #fff;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      margin-left: 80px;
+      color: #fff
+    }
+
+    .movies {
+      display: flex;
+      overflow: hidden;
+      gap: 15px;
+      position: relative;
+      width: 100%;
+      transition: transform 0.3s ease-in-out;
+     
+    }
+
+    .movie {
+      left: 80px;
+      width: 200px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .movie img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .movie:hover {
+      transform: scale(1.1);
+    }
+
+    .movie-title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .arrow-left, .arrow-right {
+      position: absolute;
+      top: 50%;
+      color: #fff;
+      font-size: 2rem;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px;
+      transition: background 0.3s;
+    }
+
+    .arrow-left {
+      left:10px;
+    }
+
+    .arrow-right {
+      right: 250px;
+    }
+
+    .arrow-left:hover, .arrow-right:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .trending-now {
+      left: 30px;
+      background: url(photos/4.jpg)no-repeat center center/cover;
+      background-size: cover;
+      padding: 60px 5%;
+      color: #fff;
+    }
+
+    .trending-now h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      margin-left: 80px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .trending-now .movies {
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #000;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="side-nav">
+    <a href="home.html"><i class="fas fa-home"></i></a>
+    <a href="#search"><i class="fas fa-search"></i></a>
+    <a href="movies.html"><i class="fas fa-film"></i></a>
+    <a href="#trending"><i class="fas fa-fire"></i></a>
+    <a href="profile.html"><i class="fas fa-user"></i></a>
+    <a href="editP.html"><i class="fas fa-cogs"></i></a>
+   
+  </div>
+
+  <header>
+    <h1>
+        <span style="font-weight: bold; font-size: 2rem; letter-spacing: 0px;">ANI</span>
+    <span style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1rem; color: #fff;">ME</span>
+      </h1>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="movies.html">Movies & Series</a>
+        <a href="subs.html" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight:lighter">Subscription</a>
+       
+ 
+      </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Trending Now</h1>
+      <h2>One Piece</h2>
+      <button onclick="location.href='photos/monkey-d-luffy.1920x1080.mp4'">Play</button>
+  </section>
+
+  <section class="section">
+    <h2>Continue Watching</h2>
+    <div class="movies" id="movies-continue">
+      <div class="movie"><a href="vpyn.html"><img src="photos/cards/yn.jpg" alt="Movie 1"><div class="movie-title">Movie 1</div></div></a>
+      <div class="movie"><a href="suzume.html"><img src="photos/cards/suz.jpg"alt="Movie 2"><div class="movie-title">Movie 2</div></div></a>
+      <div class="movie"><a href="grave.html"><img src="photos/cards/g.jpg" alt="Movie 3"><div class="movie-title">Movie 3</div></div></a>
+      <div class="movie"><a href="deathnote.html"><img src="photos/cards/dea.jpg" alt="Movie 4"><div class="movie-title">Movie 4</div></div></a>
+      <div class="movie"><a href="a silent voice.html"><img src="photos/cards/a.jpg" alt="Movie 5"><div class="movie-title">Movie 5</div></div></a>
+      <div class="movie"><a href="opm.html"><img src="photos/cards/opm.jpg" alt="Movie 5"><div class="movie-title">Movie 5</div></div></a>
+
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+   
+  </section>
+
+  <section class="trending-now">
+    <h2>Weekly Trending </h2>
+    <div class="movies" id="movies-trending">
+      <div class="movie"><a href="jujustu.html"><img src="photos/cards/juju.jpg" alt="Trending 1"><div class="movie-title">Trending 1</div></div></a>
+      <div class="movie"><
+#include <stdio.h>
+#include <string.h>
+
+void encrypt(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len; i++) {
+        str[i] = str[i] + 3; // Shift each character by 3 positions
+    }
+}
+
+int main() {
+    char str[100];
+
+    printf("Enter the string: ");
+    fgets(str, 100, stdin);
+
+    encrypt(str);
+
+    printf("Encrypted string: %s\n", str);
+
+    return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+// 1. Hello, World!
+void hello_world() {
+    printf("Hello, World!\n");
+}
+
+// 2. Sum of two numbers
+int sum(int a, int b) {
+    return a + b;
+}
+
+// 3. Factorial of a number
+int factorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+
+// 4. Fibonacci series
+void fibonacci(int n) {
+    int a = 0, b = 1, c;
+    printf("Fibonacci Series: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    printf("\n");
+}
+
+// 5. Check if a number is prime
+int is_prime(int n) {
+    if (n <= 1) {
+        return 0;
+    }
+    for (int i = 2; i * i <= n; i++) {
+        if (n % i == 0) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+// 6. Reverse a string
+void reverse_string(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        char temp = str[i];
+        str[i] = str[len - i - 1];
+        str[len - i - 1] = temp;
+    }
+}
+
+// 7. Check if a string is palindrome
+int is_palindrome(char *str) {
+    int len = strlen(str);
+    for (int i = 0; i < len / 2; i++) {
+        if (str[i] != str[len - i - 1]) {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+// 8. Find the largest element in an array
+int find_max(int arr[], int n) {
+    int max = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+// 9. Find the smallest element in an array
+int find_min(int arr[], int n) {
+    int min = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+// 10. Sort an array in ascending order (Bubble Sort)
+void bubble_sort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+// 11. Sort an array in descending order (Selection Sort)
+void selection_sort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[min_idx]) {
+                min_idx = j;
+            }
+        }
+        int temp = arr[i];
+        arr[i] = arr[min_idx];
+        arr[min_idx] = temp;
+    }
+}
+
+// 12. Search for an element in an array (Linear Search)
+int linear_search(int arr[], int n, int x) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == x) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+// 13. Search for an element in an array (Binary Search)
+int binary_search(int arr[], int l, int r, int x) {
+    if (r >= l) {
+        int mid = l + (r - l) / 2;
+        if (arr[mid] == x) {
+            return mid;
+        }
+        if (arr[mid] > x) {
+            return binary_search(arr, l, mid - 1, x);
+        }
+        return binary_search(arr, mid + 1, r, x);
+    }
+    return -1;
+}
+
+// 14. Find the GCD of two numbers
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+// 15. Find the LCM of two numbers
+int lcm(int a, int b) {
+    return (a * b) / gcd(a, b);
+}
+
+// 16. Check if a number is a power of 2
+int is_power_of_2(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    return (n & (n - 1)) == 0;
+}
+
+// 17. Swap two numbers without using a temporary variable
+void swap(int *a, int *b) {
+    *a = *a ^ *b;
+    *b = *a ^ *b;
+    *a = *a ^ *b;
+}
+
+// 18. Implement a stack using array
+#define MAX_SIZE 100
+int top = -1;
+int stack[MAX_SIZE];
+
+void push(int data) {
+    if (top >= MAX_SIZE - 1) {
+        printf("Stack Overflow\n");
+        return;
+    }
+    top++;
+    stack[top] = data;
+}
+
+int pop() {
+    if (top < 0) {
+        printf("Stack Underflow\n");
+        return -1;
+    }
+    int data = stack[top];
+    top--;
+    return data;
+}
+
+// 19. Implement a queue using array
+#define MAX_SIZE 100
+int front = -1, rear = -1;
+int queue[MAX_SIZE];
+
+void enqueue(int data) {
+    if (rear == MAX_SIZE - 1) {
+        printf("Queue Overflow\n");
+        return;
+    }
+    if (front == -1) {
+        front = 0;
+    }
+    rear++;
+    queue[rear] = data;
+}
+
+int dequeue() {
+    if (front == -1 || front > rear) {
+        printf("Queue Underflow\n");
+        return -1;
+    }
+    int data = queue[front];
+    front++;
+    if (front > rear) {
+        front = rear = -1;
+    }
+    return data;
+}
+
+// 20. Implement a linked list
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+struct Node *head = NULL;
+
+void insert_at_beginning(int data) {
+    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = head;
+    head = new_node;
+}
+
+void insert_at_end(int data) {
+    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+    new_node->data = data;
+    new_node->next = NULL;
+    if (head == NULL) {
+        head = new_node;
+        return;
+    }
+    struct Node *temp = head;
+    while (temp->next != NULL) {
+        temp = temp->next;
+    }
+    temp->next = new_node;
+}
+
+void delete_at_beginning() {
+    if (head == NULL) {
+        printf("List is empty\n");
+        return;
+    }
+    struct Node *temp = head;
+    head = head->next;
+    free(temp);
+}
+
+void delete_at_end() {
+    if (head == NULL) {
+        printf("List is empty
