@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <string.h>
+
+// Define a simple virus signature (replace with actual virus signature)
+const char* virus_signature = "41 42 43 44 45 46"; // Example signature (hex values)
+
+int main() {
+    FILE *file;
+    char buffer[1024];
+    char hex_buffer[2048]; // Double size for hex representation
+
+    // Open the file for reading (replace with the file path to scan)
+    file = fopen("file_to_scan.exe", "rb");
+    if (file == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    // Read file contents into buffer
+    fread(buffer, 1, sizeof(buffer), file);
+    fclose(file);
+
+    // Convert binary data to hex string (for easier signature comparison)
+    for (int i = 0; i < sizeof(buffer); i++) {
+        sprintf(&hex_buffer[i * 2], "%02X ", (unsigned char)buffer[i]);
+    }
+
+    // Check for virus signature in the file
+    if (strstr(hex_buffer, virus_signature) != NULL) {
+        printf("Virus detected!\n");
+    } else {
+        printf("No virus found.\n");
+    }
+
+    return 0;
+}
+WEATHER UPDATE
+#include <stdio.h>
+
+int main() {
+    float temperature;
+
+    printf("Enter the temperature in Celsius: ");
+    scanf("%f", &temperature);
+
+    if (temperature < 0) {
+        printf("Freezing weather.\n");
+    } else if (temperature < 10) {
+        printf("Very cold weather.\n");
+    } else if (temperature < 20) {
+        printf("Cold weather.\n");
+    } else if (temperature < 30) {
+        printf("Pleasant weather.\n");
+    } else if (temperature < 40) {
+        printf("Hot weather.\n");
+    } else {
+        printf("Very hot weather.\n");
+    }
+
+    return 0;
+}
