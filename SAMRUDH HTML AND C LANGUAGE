@@ -1,76 +1,3 @@
-#include <stdio.h> // Include the standard input/output library
-
-int main() {
-    // Your code here
-
-    return 0; // Indicate successful program execution
-}
-#include <stdio.h>
-
-int main() {
-    int num1, num2, sum;
-
-    printf("Enter two numbers: ");
-    scanf("%d %d", &num1, &num2);
-
-    sum = num1 + num2;
-
-    printf("Sum of %d and %d is: %d\n", num1, num2, sum);
-
-    return 0;
-}
-#include <stdio.h>
-#include <math.h>
-
-int main() {
-    char operator;
-    double num1, num2, result;
-
-    printf("Enter an operator (+, -, *, /, ^, s, c): ");
-    scanf(" %c", &operator);
-
-    printf("Enter two operands: ");
-    scanf("%lf %lf", &num1, &num2);
-
-    switch (operator) {
-        case '+':
-            result = num1 + num2;
-            printf("%.2lf + %.2lf = %.2lf", num1, num2, result);
-            break;
-        case '-':
-            result = num1 - num2;
-            printf("%.2lf - %.2lf = %.2lf", num1, num2, result);
-            break;
-        case '*':
-            result = num1 * num2;
-            printf("%.2lf * %.2lf = %.2lf", num1, num2, result);
-            break;
-        case '/':
-            if (num2 == 0) {
-                printf("Error: Division by zero!\n");
-            } else {
-                result = num1 / num2;
-                printf("%.2lf / %.2lf = %.2lf", num1, num2, result);
-            }
-            break;
-        case '^':
-            result = pow(num1, num2);
-            printf("%.2lf ^ %.2lf = %.2lf", num1, num2, result);
-            break;
-        case 's':
-            result = sin(num1);
-            printf("sin(%.2lf) = %.2lf", num1, result);
-            break;
-        case 'c':
-            result = cos(num1);
-            printf("cos(%.2lf) = %.2lf", num1, result);
-            break;
-        default:
-            printf("Error: Invalid operator\n");
-    }
-
-    return 0;
-}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -238,7 +165,7 @@ int main() {
       position: relative;
       width: 100%;
       transition: transform 0.3s ease-in-out;
-     
+      
     }
 
     .movie {
@@ -346,9 +273,9 @@ int main() {
       <nav>
         <a href="home.html">Home</a>
         <a href="movies.html">Movies & Series</a>
-        <a href="subs.html" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight:lighter">Subscription</a>
+        <a href="subs.html" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-weight:lighter">Subscription</a> 
        
- 
+  
       </nav>
   </header>
 
@@ -372,304 +299,260 @@ int main() {
       <i class="arrow-left fas fa-chevron-left"></i>
       <i class="arrow-right fas fa-chevron-right"></i>
     </div>
-   
+    
   </section>
 
   <section class="trending-now">
     <h2>Weekly Trending </h2>
     <div class="movies" id="movies-trending">
       <div class="movie"><a href="jujustu.html"><img src="photos/cards/juju.jpg" alt="Trending 1"><div class="movie-title">Trending 1</div></div></a>
-      <div class="movie"><
-#include <stdio.h>
-#include <string.h>
+      <div class="movie"><a href="naruto.html"><img src="photos/cards/na.jpg" alt="Trending 2"><div class="movie-title">Trending 2</div></div></a>
+      <div class="movie"><a href="op.html"><img src="photos/cards/op.jpg" alt="Trending 3"><div class="movie-title">Trending 3</div></div></a>
+      <div class="movie"><a href="myhero.html"><img src="photos/cards/my.jpg" alt="Trending 4"><div class="movie-title">Trending 4</div></div></a>
+      <div class="movie"><a href="demon.html"><img src="photos/cards/dem.jpg" alt="Trending 4"><div class="movie-title">Trending 4</div></div></a>
+      <div class="movie"><a href="blackclove.html"><img src="photos/cards/bc.jpg" alt="Trending 4"><div class="movie-title">Trending 4</div></div></a>
 
-void encrypt(char *str) {
-    int len = strlen(str);
-    for (int i = 0; i < len; i++) {
-        str[i] = str[i] + 3; // Shift each character by 3 positions
+      <i class="arrow-left.t fas fa-chevron-left"></i>
+      <i class="arrow-right.t fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Top Picks for You</h2>
+    <div class="movies" id="movies-top-picks">
+      <i class="arrow-left fas fa-chevron-left"></i>
+      <div class="movie"><a href="AOT.html"><img src="photos/cards/aot.jpg" alt="Top Pick 1"><div class="movie-title">Top Pick 1</div></div></a>
+      <div class="movie"><a href="solol.html"><img src="photos/cards/sl.jpg" alt="Top Pick 2"><div class="movie-title">Top Pick 2</div></div></a>
+      <div class="movie"><a href="tokyo.html"><img src="photos/cards/ty.jpg" alt="Top Pick 3"><div class="movie-title">Top Pick 3</div></div></a>
+      <div class="movie"><a href="seaven.html"><img src="photos/cards/sea.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="hh.html"><img src="photos/cards/hh.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <div class="movie"><a href="thewind.html"><img src="photos/cards/the.jpg" alt="Top Pick 4"><div class="movie-title">Top Pick 4</div></div></a>
+      <i class="arrow-right fas fa-chevron-right"></i>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>© 2024 ANIme. All rights reserved.</p>
+  </footer>
+
+  
+<script>
+  let isPlaying = false;
+
+    function playVideo() {
+      const heroSection = document.querySelector('.hero');
+      heroSection.style.backgroundImage = 'url(photos/shanks-5k-one-piece-5120x2880-18352.jpg)';
+      const video = document.createElement('video');
+      video.src = 'videos/one-piece-trailer.mp4';
+      video.setAttribute('autoplay', 'true');
+      video.setAttribute('loop', 'true');
+      video.setAttribute('muted', 'true');
+      video.style.width = '100%';
+      video.style.height = '100%';
+      video.style.position = 'absolute';
+      video.style.top = 0;
+      video.style.left = 0;
+      video.style.zIndex = -1;
+      heroSection.appendChild(video);
+
+      isPlaying = true;
+      document.querySelector('.close-btn').style.display = 'block';
+      document.querySelector('.hero-content').style.opacity = '0';
     }
-}
 
-int main() {
-    char str[100];
-
-    printf("Enter the string: ");
-    fgets(str, 100, stdin);
-
-    encrypt(str);
-
-    printf("Encrypted string: %s\n", str);
-
-    return 0;
-}
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-
-// 1. Hello, World!
-void hello_world() {
-    printf("Hello, World!\n");
-}
-
-// 2. Sum of two numbers
-int sum(int a, int b) {
-    return a + b;
-}
-
-// 3. Factorial of a number
-int factorial(int n) {
-    if (n == 0) {
-        return 1;
-    } else {
-        return n * factorial(n - 1);
+    function closeVideo() {
+      const video = document.querySelector('.hero video');
+      if (video) {
+        video.remove();
+        document.querySelector('.close-btn').style.display = 'none';
+        isPlaying = false;
+        document.querySelector('.hero-content').style.opacity = '1';
+        const heroSection = document.querySelector('.hero');
+        heroSection.style.backgroundImage = 'url(photos/shanks-5k-one-piece-5120x2880-18352.jpg)';
+      }
     }
+  const heroSlides = [
+  {
+    imageUrl: 'photos/shanks-5k-one-piece-5120x2880-18352.jpg',
+    title: 'One Piece',
+    subTitle: 'Watch Now'
+  },
+  {
+    imageUrl: 'photos/4.jpg',
+    title: 'Naruto',
+    subTitle: 'Watch Now'
+  },
+  {
+    imageUrl: 'photos/movies.jpg',
+    title: 'Blue',
+    subTitle: 'Watch Now'
+  }
+];
+
+let currentSlideIndex = 0;
+
+function showNextSlide() {
+  const heroElement = document.querySelector('.hero');
+  const heroContent = heroElement.querySelector('.hero-content');
+  const { imageUrl, title } = heroSlides[currentSlideIndex];
+
+  
+  heroContent.style.opacity = '0';
+
+  setTimeout(() => {
+    
+    heroElement.style.backgroundImage = `url(${imageUrl})`;
+    heroElement.querySelector('.hero-content h2').innerText = title;
+
+   
+    heroContent.style.opacity = '1';
+
+    
+    currentSlideIndex = (currentSlideIndex + 1) % heroSlides.length;
+  }, 500); 
 }
 
-// 4. Fibonacci series
-void fibonacci(int n) {
-    int a = 0, b = 1, c;
-    printf("Fibonacci Series: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", a);
-        c = a + b;
-        a = b;
-        b = c;
-    }
-    printf("\n");
+function startHeroBannerSlideshow() {
+  setInterval(showNextSlide, 5000);
 }
 
-// 5. Check if a number is prime
-int is_prime(int n) {
-    if (n <= 1) {
-        return 0;
-    }
-    for (int i = 2; i * i <= n; i++) {
-        if (n % i == 0) {
-            return 0;
-        }
-    }
-    return 1;
-}
+window.onload = startHeroBannerSlideshow;
 
-// 6. Reverse a string
-void reverse_string(char *str) {
-    int len = strlen(str);
-    for (int i = 0; i < len / 2; i++) {
-        char temp = str[i];
-        str[i] = str[len - i - 1];
-        str[len - i - 1] = temp;
-    }
-}
 
-// 7. Check if a string is palindrome
-int is_palindrome(char *str) {
-    int len = strlen(str);
-    for (int i = 0; i < len / 2; i++) {
-        if (str[i] != str[len - i - 1]) {
-            return 0;
-        }
-    }
-    return 1;
-}
+const leftArrow = document.querySelector('.arrow-left');
+const rightArrow = document.querySelector('.arrow-right');
+const movieContainer = document.querySelector();
+const movies = document.querySelectorAll('.movie');
+const cardWidth = movies[0].offsetWidth + 15;
 
-// 8. Find the largest element in an array
-int find_max(int arr[], int n) {
-    int max = arr[0];
-    for (int i = 1; i < n; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    return max;
-}
+let currentIndex = 0;
 
-// 9. Find the smallest element in an array
-int find_min(int arr[], int n) {
-    int min = arr[0];
-    for (int i = 1; i < n; i++) {
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-    }
-    return min;
-}
+rightArrow.addEventListener('click', () => {
+  if (currentIndex < movies.length - 1) {
+    currentIndex++;
+    movieContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+});
 
-// 10. Sort an array in ascending order (Bubble Sort)
-void bubble_sort(int arr[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
-    }
-}
+leftArrow.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    movieContainer.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+});
 
-// 11. Sort an array in descending order (Selection Sort)
-void selection_sort(int arr[], int n) {
-    for (int i = 0; i < n - 1; i++) {
-        int min_idx = i;
-        for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[min_idx]) {
-                min_idx = j;
-            }
-        }
-        int temp = arr[i];
-        arr[i] = arr[min_idx];
-        arr[min_idx] = temp;
-    }
-}
-
-// 12. Search for an element in an array (Linear Search)
-int linear_search(int arr[], int n, int x) {
-    for (int i = 0; i < n; i++) {
-        if (arr[i] == x) {
-            return i;
-        }
-    }
-    return -1;
-}
-
-// 13. Search for an element in an array (Binary Search)
-int binary_search(int arr[], int l, int r, int x) {
-    if (r >= l) {
-        int mid = l + (r - l) / 2;
-        if (arr[mid] == x) {
-            return mid;
-        }
-        if (arr[mid] > x) {
-            return binary_search(arr, l, mid - 1, x);
-        }
-        return binary_search(arr, mid + 1, r, x);
-    }
-    return -1;
-}
-
-// 14. Find the GCD of two numbers
-int gcd(int a, int b) {
-    if (b == 0) {
-        return a;
-    }
-    return gcd(b, a % b);
-}
-
-// 15. Find the LCM of two numbers
-int lcm(int a, int b) {
-    return (a * b) / gcd(a, b);
-}
-
-// 16. Check if a number is a power of 2
-int is_power_of_2(int n) {
-    if (n == 0) {
-        return 0;
-    }
-    return (n & (n - 1)) == 0;
-}
-
-// 17. Swap two numbers without using a temporary variable
-void swap(int *a, int *b) {
-    *a = *a ^ *b;
-    *b = *a ^ *b;
-    *a = *a ^ *b;
-}
-
-// 18. Implement a stack using array
-#define MAX_SIZE 100
-int top = -1;
-int stack[MAX_SIZE];
-
-void push(int data) {
-    if (top >= MAX_SIZE - 1) {
-        printf("Stack Overflow\n");
-        return;
-    }
-    top++;
-    stack[top] = data;
-}
-
-int pop() {
-    if (top < 0) {
-        printf("Stack Underflow\n");
-        return -1;
-    }
-    int data = stack[top];
-    top--;
-    return data;
-}
-
-// 19. Implement a queue using array
-#define MAX_SIZE 100
-int front = -1, rear = -1;
-int queue[MAX_SIZE];
-
-void enqueue(int data) {
-    if (rear == MAX_SIZE - 1) {
-        printf("Queue Overflow\n");
-        return;
-    }
-    if (front == -1) {
-        front = 0;
-    }
-    rear++;
-    queue[rear] = data;
-}
-
-int dequeue() {
-    if (front == -1 || front > rear) {
-        printf("Queue Underflow\n");
-        return -1;
-    }
-    int data = queue[front];
-    front++;
-    if (front > rear) {
-        front = rear = -1;
-    }
-    return data;
-}
-
-// 20. Implement a linked list
-struct Node {
-    int data;
-    struct Node *next;
-};
-
-struct Node *head = NULL;
-
-void insert_at_beginning(int data) {
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
-    new_node->data = data;
-    new_node->next = head;
-    head = new_node;
-}
-
-void insert_at_end(int data) {
-    struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
-    new_node->data = data;
-    new_node->next = NULL;
-    if (head == NULL) {
-        head = new_node;
-        return;
-    }
-    struct Node *temp = head;
-    while (temp->next != NULL) {
-        temp = temp->next;
-    }
-    temp->next = new_node;
-}
-
-void delete_at_beginning() {
-    if (head == NULL) {
-        printf("List is empty\n");
-        return;
-    }
-    struct Node *temp = head;
-    head = head->next;
-    free(temp);
-}
-
-void delete_at_end() {
-    if (head == NULL) {
-        printf("List is empty
+</script>
+</body>
+</html>
